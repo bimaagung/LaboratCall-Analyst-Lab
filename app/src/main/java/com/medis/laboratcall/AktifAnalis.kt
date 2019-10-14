@@ -17,7 +17,7 @@ import org.jetbrains.anko.indeterminateProgressDialog
 
 class AktifAnalis : AppCompatActivity(), View.OnClickListener {
 
-
+//oke
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aktif_analis)
