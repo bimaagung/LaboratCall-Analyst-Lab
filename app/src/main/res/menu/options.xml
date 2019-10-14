@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Aktif Laboratorium Klinik"
+          android:id="@+id/aktif_lab_klinik" android:icon="@drawable/ic_settings_black_24dp"/>
+
+    <item android:title="Akun"
+          android:id="@+id/akun" android:icon="@drawable/ic_settings_black_24dp"/>
+
+</menu>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.medis.laboratcall">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_laboratcall"
+            android:label="@string/app_name"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:roundIcon="@mipmap/ic_laboratcall_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".ProfilActivity">
+        </activity>
+        <activity
+                android:name=".SplashScreen"
+                android:theme="@style/AppThemeLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".DetailPromo">
+        </activity>
+        <activity android:name=".PilihanPasienOncall">
+        </activity>
+        <activity android:name=".AktifAnalis">
+        </activity>
+        <activity android:name=".PencarianPasien">
+        </activity>
+        <activity android:name=".PendaftaranPasien">
+        </activity>
+        <activity android:name=".DaftarPilihanPasien">
+        </activity>
+        <activity android:name=".DetailPasien">
+        </activity>
+        <activity
+                android:name=".HomeActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key"/>
+
+        <activity android:name=".MapAnalis">
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <service android:name=".services.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/logolabarotcall"/>
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorPrimary"/>
+
+        <activity
+                android:name=".PaketPromo"
+                android:theme="@style/AppThemeLogin">
+        </activity>
+        <activity
+                android:name=".Pembayaran"
+                android:theme="@style/AppThemeLogin">
+        </activity>
+        <activity
+                android:name=".PilihPemeriksaan"
+                android:theme="@style/AppThemeLogin">
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:theme="@style/AppThemeLogin">
+        </activity>
+    </application>
+
+</manifest>

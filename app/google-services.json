@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "941897428964",
+    "firebase_url": "https://laboratcall.firebaseio.com",
+    "project_id": "laboratcall",
+    "storage_bucket": "laboratcall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941897428964:android:5413f6e5aba76e57",
+        "android_client_info": {
+          "package_name": "com.medis.laboratcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941897428964-ntt2825jd95qad7fb45aed3crmq2qtcp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.medis.laboratcall",
+            "certificate_hash": "31735d6988846f3e5c22d8bf255dbfdf27e8d37c"
+          }
+        },
+        {
+          "client_id": "941897428964-5j321g75ob0khfk14dalqjurica9l9cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Ldzni69ZSrW8owSlQTum3aJ8OWa_fJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941897428964-5j321g75ob0khfk14dalqjurica9l9cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

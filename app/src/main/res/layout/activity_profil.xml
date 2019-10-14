@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ProfilActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/datatoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#ffff"
+            app:title="Profil Analis"
+            app:titleTextColor="#05C121"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.26999998">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/v_foto_analis"
+                android:scaleType="centerCrop"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@color/colorPrimary"/>
+        <TextView
+                android:id="@+id/tx_nama_analis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bima Agung Setya Budi"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="16sp"/>
+        <TextView
+                android:id="@+id/tx_tanggal_lahir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bimaagungsetya@gmail.com"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="14sp"/>
+        <TextView
+                android:id="@+id/tx_no_wa_analis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bimaagungsetya@gmail.com"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="14sp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#58C171"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:text="LaboratCall Analis v1.0"/>
+
+    <Button
+            android:layout_marginTop="25dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/tb_logout"
+            android:layout_width="80dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="#ADADAD"
+            android:textAlignment="center"
+            android:text="Logout"/>
+
+</LinearLayout>
