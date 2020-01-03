@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -87,7 +88,8 @@ class FragmentOffLocation : Fragment() {
             },
             Response.ErrorListener { error ->
 //                loading.dismiss()
-                Toast.makeText(activity, error.message, Toast.LENGTH_LONG).show()
+              //  Toast.makeText(activity, error.message, Toast.LENGTH_LONG).show()
+                Log.d("OnLocation","Data kosong")
             })
         rq.add(jar)
     }

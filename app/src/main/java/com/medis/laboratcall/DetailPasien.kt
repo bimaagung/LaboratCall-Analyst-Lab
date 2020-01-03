@@ -61,7 +61,14 @@ class DetailPasien : AppCompatActivity() {
 
             }else if(layanan.equals("onlocation"))
             {
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 123)
+                var i = Intent(this, PilihanPasienOncall::class.java)
+                i.putExtra("id_pemeriksaan",id_pemeriksaan)
+                i.putExtra("id_pasien",id_pasien)
+                i.putExtra("nama_pasien",nama_pasien)
+                i.putExtra("id_oncall",id_oncall)
+                i.putExtra("no_wa_pasien",no_wa_pasien)
+                startActivity(i)
+                finish()
             }else
             {
                 Toast.makeText(this, "Detail Pasien Intent Error", Toast.LENGTH_LONG).show()
@@ -71,37 +78,6 @@ class DetailPasien : AppCompatActivity() {
         }
 
     }
-
-    @SuppressLint("MissingPermission")
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        var id_pemeriksaan =  intent.getStringExtra("id_pemeriksaan")
-        var id_oncall = intent.getStringExtra("id_oncall")
-        var id_pasien = intent.getStringExtra("id_pasien")
-        var nama_pasien = intent.getStringExtra("nama_pasien")
-        var no_wa_pasien = intent.getStringExtra("no_wa_pasien")
-
-        if (requestCode == 123) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                var i = Intent(this, PilihanPasienOncall::class.java)
-                i.putExtra("id_pemeriksaan",id_pemeriksaan)
-                i.putExtra("id_pasien",id_pasien)
-                i.putExtra("nama_pasien",nama_pasien)
-                i.putExtra("id_oncall",id_oncall)
-                i.putExtra("no_wa_pasien",no_wa_pasien)
-                startActivity(i)
-                finish()
-
-            } else {
-                var intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
-    }
-
 
 
 }

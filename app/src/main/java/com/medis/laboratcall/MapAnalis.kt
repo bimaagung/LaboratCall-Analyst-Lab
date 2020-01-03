@@ -94,10 +94,10 @@ class MapAnalis : AppCompatActivity(), OnMapReadyCallback {
 
 //        var item_pemeriksaan = intent.getSerializableExtra("item")
 //        var harga_pemeriksaan = intent.getStringExtra("harga")
-        tx_analis.text = "Bima Agung Setya Budi"
+        tx_analis.text = "Riani Lestari"
         tx_waktu.text = ""
         tx_jarak.text = ""
-        tx_peran.text = "Analis"
+        tx_peran.text = "Pasien"
         tx_harga_map.text = ""
         aktif_oncall.visibility = View.GONE
         loading.visibility = View.VISIBLE
@@ -266,7 +266,7 @@ class MapAnalis : AppCompatActivity(), OnMapReadyCallback {
                     }
                 }
 
-                manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 60000, 0f, listener)
+                manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0f, listener)
 
             }
         }
@@ -311,7 +311,14 @@ class MapAnalis : AppCompatActivity(), OnMapReadyCallback {
              //durationValue = legs.getJSONObject(0).getJSONObject("duration").getString("value")
 
             //Kalkulasi Harga
-            var kalkulasi_harga = distanceValue*7
+            var kalkulasi_harga = distanceValue*6
+
+            if(kalkulasi_harga.equals(0)){
+                kalkulasi_harga = 50
+            }else{
+                kalkulasi_harga = distanceValue*6
+            }
+
             var formatterHarga = DecimalFormat("#,###")
             formattedHarga = formatterHarga.format(kalkulasi_harga)
             HargaNoFormated = kalkulasi_harga

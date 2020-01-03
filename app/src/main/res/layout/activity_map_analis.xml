@@ -148,6 +148,7 @@
                       app:layout_constraintTop_toTopOf="parent" android:layout_marginLeft="8dp"
                       android:layout_marginStart="8dp"
                       android:id="@+id/tx_analis"/>
+
             <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:textSize="11sp"
